@@ -20,7 +20,7 @@ class FB_if_you_like {
 	}
 	public function plugins_loaded()
 	{
-		add_filter( 'the_content', array( $this, 'the_content' ), 999 );
+		add_filter( 'the_content', array( $this, 'the_content' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ) );
 		add_action( 'wp_footer', array( $this, 'wp_footer' ), 21 );
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
