@@ -51,10 +51,19 @@ class FB_if_you_like {
 		}
 		$like = '<div style="padding:10px 0px;"></div>';
 
-		if (get_option('mamahack_fb_account'))
+		if ( get_option( 'mamahack_fb_account' ) )
 		{
 			$like .= '<div class="p-entry__push">';
-			$like .= '<div class="p-entry__pushThumb" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id($post->ID) ). ')"></div>';
+			$like .= '<div class="p-entry__pushThumb" style="background-image: url(';
+			if ( has_post_thumbnail( $post->ID ) )
+			{
+				$like .= wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), 'medium' );
+			}
+			elseif ( has_site_icon() )
+			{
+				$like .= get_site_icon_url();
+			}
+			$like .= ')"></div>';
 			$like .= '<div class="p-entry__pushLike">';
 			$like .= '<p>'._('この記事が気に入ったら<br>いいね！しよう').'</p>';
 			$like .= '<div class="p-entry__pushButton">';

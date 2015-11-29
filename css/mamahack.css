@@ -56,3 +56,6 @@
     vertical-align: middle;
     padding-right: 15px;
 }
+.p-entry__tw-follow__cont > * {
+    margin: 0;
+}
