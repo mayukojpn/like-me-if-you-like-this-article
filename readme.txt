@@ -1,8 +1,8 @@
 === Facebook like if you like this article ===
 
 Contributors: mayukojpn, manami1030
-Donate link: http://blog.mayuko.me
-Tags: facebook, Twitter
+Donate link: https://www.amazon.co.jp/gp/registry/wishlist/2Y5R0AGU9EP3Q
+Tags: Facebook, Twitter
 Requires at least: 3.8
 Tested up to: 4.3.1
 Stable tag: 0.1
@@ -12,7 +12,14 @@ This will recommend to like any Facebook page on the bottom of every single arti
 
 == Description ==
 
-This will recommend to like any Facebook page on the bottom of every single article.
+記事の末尾に、バイラルメディア風の Facebook ページいいねを設置するプラグインです。
+一番クリックされやすい、記事の末尾にボタンを設置してファンを増やそう！
+
+ママブロガー・[まなしば](http://mama-hack.com/about)さんによる以下の記事を参考にしました。
+「[FacebookページいいねやTwitterフォロワーが倍増！バイラルメディア風オリジナルSNSボタンの設置方法【WordPress】](http://mama-hack.com/snsbox)」
+
+ソースは Github にあります。不具合などありましたらご連絡ください。
+https://github.com/mayukojpn/like-me-if-you-like-this-article
 
 == Installation ==
 
@@ -24,7 +31,7 @@ This will recommend to like any Facebook page on the bottom of every single arti
 ##日本語
 1. フォルダを`/wp-content/plugins/`ディレクトリにアップロードします。
 2. 管理画面上の`プラグイン`から、プラグインを有効にします。
-3. 管理画面上の`設定`>`表示設定`から、表示させるHTMLタグを設定し、保存します。
+3. 管理画面上の`設定`>`表示設定`から、Facebook と Twitter のアカウントを設定し、保存します。
 
 == Screenshots ==
 

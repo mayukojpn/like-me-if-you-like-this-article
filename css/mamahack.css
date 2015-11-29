@@ -2,7 +2,7 @@
 .p-entry__push {
     margin-bottom: 20px;
     display: table;
-    table-layout: fix;
+    table-layout: fixed;
     width: 100%;
     background-color: #2b2b2b;
     color: #fff;
@@ -11,7 +11,7 @@
     display: table-cell;
     min-width: 240px;
     background-position: center;
-background-size:cover;
+    background-size: cover;
 }
 .p-entry__pushLike {
     display: table-cell;
@@ -24,7 +24,7 @@ background-size:cover;
 .p-entry__pushButton {
     margin-top: 15px;
     display: inline-block;
-    width: 200px;
+    width: 100%;
     height: 40px;
     line-height: 40px;
     -webkit-transform: scale(1.2);
@@ -43,19 +43,16 @@ background-size:cover;
     margin-bottom: 10px;
     background: #f4f4f4;
     width: 100%;
-    border-spacing: 15px;
+    padding: 15px 0;
 }
 .p-entry__tw-follow__cont {
-    display: table;
     margin: 0 auto;
     text-align: center;
     font-size: 15px;
     color: #252525
 }
-.p-entry__tw-follow__cont > * {
-    margin: 0;
-}
 .p-entry__tw-follow__item {
-    display: table-cell;
+    display: inline;
     vertical-align: middle;
+    padding-right: 15px;
 }
