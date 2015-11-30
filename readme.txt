@@ -1,4 +1,4 @@
-=== Facebook like if you like this article ===
+=== Like me if you like this article ===
 
 Contributors: mayukojpn, manami1030
 Donate link: https://www.amazon.co.jp/gp/registry/wishlist/2Y5R0AGU9EP3Q

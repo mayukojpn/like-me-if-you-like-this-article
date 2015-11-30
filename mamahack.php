@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Facebook like if you like this article
+Plugin Name: Like me if you like this article
 Description: This will recommend to like any Facebook page on the bottom of every single article.
 Author: Mayuko Moriyama
 Version: 0.1
 Author URI: http://blog.mayuko.me
-Plugin URI: https://github.com/mayukojpn/fb-like-if-you-like-this-article
+Plugin URI: https://github.com/mayukojpn/like-me-if-you-like-this-article
 Text Domain: mamahack
 */
 
