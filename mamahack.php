@@ -24,8 +24,6 @@ class FB_if_you_like {
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ) );
 		add_action( 'wp_footer', array( $this, 'wp_footer' ), 21 );
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
-		add_filter( 'script_loader_src', array( $this, 'async_script_loader_src' ), '', 2 );
-
 
 	}
 	public function wp_enqueue_scripts()
@@ -55,9 +53,9 @@ class FB_if_you_like {
 		{
 			$like .= '<div class="p-entry__push">';
 			$like .= '<div class="p-entry__pushThumb" style="background-image: url(';
-			if ( has_post_thumbnail( $post->ID ) )
+			if ( has_post_thumbnail( get_the_ID() ) )
 			{
-				$like .= wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), 'medium' );
+				$like .= wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID() ), 'medium' );
 			}
 			elseif ( has_site_icon() )
 			{
@@ -69,7 +67,7 @@ class FB_if_you_like {
 			$like .= '<div class="p-entry__pushButton">';
 			$like .= '<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/';
 			$like .=  esc_html( get_option('mamahack_fb_account') );
-			$like .= '&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&font=arial&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>';
+			$like .= '&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&font=arial&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>';
 			$like .= '</div>';
 			$like .= '<p class="p-entry__note">最新情報をお届けします</p>';
 			$like .= '</div>';
@@ -97,16 +95,10 @@ class FB_if_you_like {
 
 		return apply_filters( 'mamahack_the_content', $contents . $like, $like, $contents );
 	}
-	public function async_script_loader_src() {
-		$html = "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>";
-			echo $html;
-		add_action( 'wp_footer', array( $this, 'wp_footer' ), 21 );
-		return '';
-	}
 	public function wp_footer()
 	{
 		echo '<div id="fb-root"></div>';
-
+		echo "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>";
 	}
 
 	public function mamahack_section_message() {
