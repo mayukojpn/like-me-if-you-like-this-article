@@ -4,7 +4,7 @@ Contributors: mayukojpn, manami1030
 Donate link: https://www.amazon.co.jp/gp/registry/wishlist/2Y5R0AGU9EP3Q
 Tags: Facebook, Twitter
 Requires at least: 3.8
-Tested up to: 4.3.1
+Tested up to: 4.4
 Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,11 +43,19 @@ https://github.com/mayukojpn/like-me-if-you-like-this-article
 
 == Changelog ==
 
+= 0.2 =
+
+* fix some bugs.
+
 = 0.1 =
 
 * first version.
 
 == Upgrade Notice ==
+
+= 0.2 =
+
+* fix some bugs.
 
 = 0.1 =
 

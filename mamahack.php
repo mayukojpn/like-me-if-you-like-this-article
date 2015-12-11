@@ -3,7 +3,7 @@
 Plugin Name: Like me if you like this article
 Description: This will recommend to like any Facebook page on the bottom of every single article.
 Author: Mayuko Moriyama
-Version: 0.1
+Version: 0.2
 Author URI: http://blog.mayuko.me
 Plugin URI: https://github.com/mayukojpn/like-me-if-you-like-this-article
 Text Domain: mamahack
