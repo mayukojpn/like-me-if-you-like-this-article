@@ -54,9 +54,11 @@
 .p-entry__tw-follow__item {
     display: inline;
     vertical-align: middle;
+    font-size: 15px;
 }
 .p-entry__tw-follow__cont iframe[id*="twitter-widget-"]{
     margin: 7px !important;
+    vertical-align: middle;
 }
 @media screen and (min-width: 44.375em) {
     .p-entry__pushLike {
