@@ -5,7 +5,7 @@ Donate link: https://www.amazon.co.jp/gp/registry/wishlist/2Y5R0AGU9EP3Q
 Tags: Facebook, Twitter
 Requires at least: 3.8
 Tested up to: 4.4
-Stable tag: 0.1
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This will recommend to like any Facebook page on the bottom of every single article.
@@ -36,12 +36,14 @@ https://github.com/mayukojpn/like-me-if-you-like-this-article
 == Screenshots ==
 
 1. Facebook Like button & Twitter Follow button will show on the bottom of article.
-1. Facebook いいね & Twitter フォローボタンが記事の末尾に表示されます。
 
 2. Set your text through the `Option`>`Reading` menu in WordPress
-2. 管理画面上の`設定`>`表示設定`から、表示させるHTMLタグを設定し、保存します。
 
 == Changelog ==
+
+= 0.3 =
+
+* Add Responsive Design.
 
 = 0.2 =
 
@@ -52,6 +54,10 @@ https://github.com/mayukojpn/like-me-if-you-like-this-article
 * first version.
 
 == Upgrade Notice ==
+
+= 0.3 =
+
+* Add Responsive Design.
 
 = 0.2 =
 
