@@ -47,12 +47,12 @@ class FB_if_you_like {
 		if ( ! is_singular() ) {
 			return $contents;
 		}
-		$like = '<div style="padding:10px 0px;"></div>';
+		$like = '<p>&nbsp;</p>';
 
 		if ( get_option( 'mamahack_fb_account' ) )
 		{
-			$like .= '<div class="p-entry__push">';
-			$like .= '<div class="p-entry__pushThumb" style="background-image: url(';
+			$like .= '<div class="mamahack-fb">';
+			$like .= '<div class="mamahack-fb__boxThumb" style="background-image: url(';
 			if ( has_post_thumbnail( get_the_ID() ) )
 			{
 				$like .= wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID() ), 'medium' );
@@ -62,34 +62,28 @@ class FB_if_you_like {
 				$like .= get_site_icon_url();
 			}
 			$like .= ')"></div>';
-			$like .= '<div class="p-entry__pushLike">';
-			$like .= '<p>'._('この記事が気に入ったら<br>いいね！しよう').'</p>';
-			$like .= '<div class="p-entry__pushButton">';
+			$like .= '<div class="mamahack-fb__boxLike">';
+			$like .= '<p class="mamahack-fb__boxLike__message">'._('この記事が気に入ったら<br>いいね！しよう').'</p>';
+			$like .= '<div class="mamahack-fb__boxLike__button">';
 			$like .= '<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/';
 			$like .=  esc_html( get_option('mamahack_fb_account') );
-			$like .= '&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&font=arial&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>';
+			$like .= '&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&font=arial&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>';
 			$like .= '</div>';
-			$like .= '<p class="p-entry__note">最新情報をお届けします</p>';
+			$like .= '<p class="mamahack-fb__boxLike__note">最新情報をお届けします</p>';
 			$like .= '</div>';
 			$like .= '</div>';
 		}
 		if( get_option( 'mamahack_tw_account' ) )
 		{
-			$like .= '<div class="p-entry__tw-follow">';
-			$like .= '<div class="p-entry__tw-follow__cont">';
-			$like .= '<p class="p-entry__tw-follow__item">';
+			$like .= '<div class="mamahack-tw">';
+			$like .= '<p class="mamahack-tw__item">Twitterで';
 
 			if( $mamahack_tw_message = esc_html( get_option( 'mamahack_tw_message ') ) )
 			{
-				$like .= $mamahack_tw_message;
+				$like .= $mamahack_tw_message . 'を';
 			}
-			else
-			{
-				$like .= 'Twitterでフォローしよう！';
-			}
-			$like .= '</p>';
-			$like .= '<a href="https://twitter.com/'.esc_html( get_option('mamahack_tw_account') ).'" class="twitter-follow-button p-entry__tw-follow__item" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @'.esc_html( get_option('mamahack_tw_account') ).'</a>';
-			$like .= '</div>';
+			$like .= '<span>フォローしよう！</span></p>';
+			$like .= '<a href="https://twitter.com/'.esc_html( get_option('mamahack_tw_account') ).'" class="twitter-follow-button mamahack-tw__item" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @'.esc_html( get_option('mamahack_tw_account') ).'</a>';
 			$like .= '</div>';
 		}
 
@@ -140,7 +134,7 @@ class FB_if_you_like {
 
 		add_settings_field(
 			'mamahack_tw_message',
-			_( 'Twitter メッセージ' ),
+			_( 'Twitter 表示名' ),
 			array( $this, 'mamahack_tw_message' ),
 			'reading',
 			'mamahack');
