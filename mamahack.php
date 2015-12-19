@@ -2,12 +2,15 @@
 /*
 Plugin Name: Like me if you like this article
 Description: This will recommend to like any Facebook page on the bottom of every single article.
-Author: Mayuko Moriyama
-Version: 0.3
+Author: Mayo Moriyama
+Version: 0.4
 Author URI: http://blog.mayuko.me
 Plugin URI: https://github.com/mayukojpn/like-me-if-you-like-this-article
-Text Domain: mamahack
+Text Domain: like-me-if-you-like-this-article
+Domain Path: /languages
 */
+
+define( 'MAMAHACK_DIR', dirname( __FILE__ ) );
 
 $mamahack = new FB_if_you_like();
 $mamahack->register();
@@ -20,11 +23,12 @@ class FB_if_you_like {
 	}
 	public function plugins_loaded()
 	{
+		load_plugin_textdomain( 'like-me-if-you-like-this-article', false, plugin_basename( MAMAHACK_DIR ) . '/languages' );
+
 		add_filter( 'the_content', array( $this, 'the_content' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ) );
 		add_action( 'wp_footer', array( $this, 'wp_footer' ), 21 );
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
-
 	}
 	public function wp_enqueue_scripts()
 	{
@@ -63,26 +67,30 @@ class FB_if_you_like {
 			}
 			$like .= ')"></div>';
 			$like .= '<div class="mamahack-fb__boxLike">';
-			$like .= '<p class="mamahack-fb__boxLike__message">'._('この記事が気に入ったら<br>いいね！しよう').'</p>';
+			$like .= '<p class="mamahack-fb__boxLike__message">'.__( 'Did you enjoy the blog?<br>Like me!', 'like-me-if-you-like-this-article' ).'</p>';
 			$like .= '<div class="mamahack-fb__boxLike__button">';
 			$like .= '<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/';
 			$like .=  esc_html( get_option('mamahack_fb_account') );
 			$like .= '&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&font=arial&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>';
 			$like .= '</div>';
-			$like .= '<p class="mamahack-fb__boxLike__note">最新情報をお届けします</p>';
+			$like .= '<p class="mamahack-fb__boxLike__note">'.__( 'Get the latest.', 'like-me-if-you-like-this-article' ).'</p>';
 			$like .= '</div>';
 			$like .= '</div>';
 		}
 		if( get_option( 'mamahack_tw_account' ) )
 		{
 			$like .= '<div class="mamahack-tw">';
-			$like .= '<p class="mamahack-tw__item">Twitterで';
+			$like .= '<p class="mamahack-tw__item">';
 
 			if( $mamahack_tw_message = esc_html( get_option( 'mamahack_tw_message ') ) )
 			{
-				$like .= $mamahack_tw_message . 'を';
+				$like .= sprintf( __( 'Follow %s on Twitter!', 'like-me-if-you-like-this-article' ), $mamahack_tw_message );
 			}
-			$like .= '<span>フォローしよう！</span></p>';
+			else
+			{
+				$like .= __( 'Follow me on Twitter!', 'like-me-if-you-like-this-article' );
+			}
+			$like .= '</p>';
 			$like .= '<a href="https://twitter.com/'.esc_html( get_option('mamahack_tw_account') ).'" class="twitter-follow-button mamahack-tw__item" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @'.esc_html( get_option('mamahack_tw_account') ).'</a>';
 			$like .= '</div>';
 		}
@@ -121,30 +129,30 @@ class FB_if_you_like {
 	public function admin_init() {
 		add_settings_section(
 			'mamahack',
-			_( '「この記事が良かったらいいね」の設定' ),
+			__( 'Like me if you like this article Settings', 'like-me-if-you-like-this-article' ),
 			array( $this, 'mamahack_section_message' ),
 			'reading' );
 
 	 	add_settings_field(
 			'mamahack_fb_account',
-			_( 'Facebook ページ名' ),
+			__( 'Facebook page id', 'like-me-if-you-like-this-article' ),
 			array( $this, 'mamahack_fb_account' ),
 			'reading',
-			'mamahack');
+			'like-me-if-you-like-this-article');
 
 		add_settings_field(
 			'mamahack_tw_message',
-			_( 'Twitter 表示名' ),
+			__( 'Twitter display name', 'like-me-if-you-like-this-article' ),
 			array( $this, 'mamahack_tw_message' ),
 			'reading',
-			'mamahack');
+			'like-me-if-you-like-this-article');
 
 		add_settings_field(
 			'mamahack_tw_account',
-			_( 'Twitter アカウント' ),
+			__( 'Twitter account' , 'like-me-if-you-like-this-article' ),
 			array( $this, 'mamahack_tw_account' ),
 			'reading',
-			'mamahack');
+			'like-me-if-you-like-this-article');
 
 
 	 	register_setting('reading','mamahack_fb_account');

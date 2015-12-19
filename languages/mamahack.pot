@@ -1,0 +1,68 @@
+# Copyright (C) 2015 Like me if you like this article
+# This file is distributed under the same license as the Like me if you like this article package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Like me if you like this article 0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/like-me-if-you-"
+"like-this-article\n"
+"POT-Creation-Date: 2015-12-19 00:07:34+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: mamahack.php:66
+msgid "Did you enjoy the blog?<br>Like me!"
+msgstr ""
+
+#: mamahack.php:72
+msgid "Get the latest."
+msgstr ""
+
+#: mamahack.php:83
+msgid "Follow %s on Twitter!"
+msgstr ""
+
+#: mamahack.php:87
+msgid "Follow me on Twitter!"
+msgstr ""
+
+#: mamahack.php:128
+msgid "Like me if you like this article Settings"
+msgstr ""
+
+#: mamahack.php:134
+msgid "Facebook page id"
+msgstr ""
+
+#: mamahack.php:141
+msgid "Twitter display name"
+msgstr ""
+
+#: mamahack.php:148
+msgid "Twitter account"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Like me if you like this article"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/mayukojpn/like-me-if-you-like-this-article"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This will recommend to like any Facebook page on the bottom of every single "
+"article."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mayo Moriyama"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://blog.mayuko.me"
+msgstr ""

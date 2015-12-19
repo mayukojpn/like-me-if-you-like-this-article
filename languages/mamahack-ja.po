@@ -1,0 +1,68 @@
+# Copyright (C) 2015 Like me if you like this article
+# This file is distributed under the same license as the Like me if you like this article package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Like me if you like this article 0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/like-me-if-you-like-this-article\n"
+"POT-Creation-Date: 2015-12-18 23:39:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-12-19 09:35+0900\n"
+"Last-Translator: \n"
+"Language-Team: Mayo Moriyama <hello@mayuko.me>\n"
+"X-Generator: Poedit 1.7.5\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
+
+#: mamahack.php:66
+msgid "Did you enjoy the blog?<br>Like me!"
+msgstr "この記事が気に入ったら<br>いいね！しよう"
+
+#: mamahack.php:72
+msgid "Get the latest."
+msgstr "最新情報をお届けします"
+
+#: mamahack.php:83
+msgid "Follow %s on Twitter!"
+msgstr "Twitter で%sを<span>フォローしよう！</span>"
+
+#: mamahack.php:87
+msgid "Follow me on Twitter!"
+msgstr "Twitter で<span>フォローしよう！</span>"
+
+#: mamahack.php:128
+msgid "Like me if you like this article Settings"
+msgstr "「この記事が気に入ったらいいね」設定"
+
+#: mamahack.php:134
+msgid "Facebook page id"
+msgstr "Facebook ページの ID"
+
+#: mamahack.php:141
+msgid "Twitter display name"
+msgstr "Twitter 表示名"
+
+#: mamahack.php:148
+msgid "Twitter account"
+msgstr "Twitter アカウント"
+
+#. Plugin Name of the plugin/theme
+msgid "Like me if you like this article"
+msgstr "この記事が気に入ったらいいね"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/mayukojpn/like-me-if-you-like-this-article"
+msgstr "https://github.com/mayukojpn/like-me-if-you-like-this-article"
+
+#. Description of the plugin/theme
+msgid "This will recommend to like any Facebook page on the bottom of every single article."
+msgstr "各個別記事のおわりに、Facebook ページヘのいいねのおすすめをします。"
+
+#. Author of the plugin/theme
+msgid "Mayo Moriyama"
+msgstr "森山真祐子"
+
+#. Author URI of the plugin/theme
+msgid "http://blog.mayuko.me"
+msgstr "http://blog.mayuko.me"
