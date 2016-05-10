@@ -3,7 +3,7 @@
 Plugin Name: Like me if you like this article
 Description: This will recommend to like any Facebook page on the bottom of every single article.
 Author: Mayo Moriyama
-Version: 0.4
+Version: 0.6
 Author URI: http://blog.mayuko.me
 Plugin URI: https://github.com/mayukojpn/like-me-if-you-like-this-article
 Text Domain: like-me-if-you-like-this-article
@@ -128,7 +128,7 @@ class FB_if_you_like {
 
 	public function admin_init() {
 		add_settings_section(
-			'mamahack',
+			'like-me-if-you-like-this-article',
 			__( 'Like me if you like this article Settings', 'like-me-if-you-like-this-article' ),
 			array( $this, 'mamahack_section_message' ),
 			'reading' );

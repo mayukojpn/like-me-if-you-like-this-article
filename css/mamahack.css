@@ -72,6 +72,9 @@
   .mamahack-fb {
     table-layout: fixed;
   }
+  .mamahack-fb p {
+    text-align: center;
+  }
   .mamahack-fb .mamahack-fb__boxLike {
     padding: 20px;
   }
