@@ -15,4 +15,5 @@ npm-debug.log
 package.json
 phpunit.xml
 tests
+assets
 vendor
